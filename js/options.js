@@ -103,7 +103,7 @@ function cbSearch(resp) {
     
 }
 
-        var reg=/^([hH][tT]{2}[pP]:\/\/|[hH][tT]{2}[pP][sS]:\/\/)(([A-Za-z0-9-~]+)\.)+([A-Za-z0-9-~\/])+$/;  
+        //var reg=/^([hH][tT]{2}[pP]:\/\/|[hH][tT]{2}[pP][sS]:\/\/)(([A-Za-z0-9-~]+)\.)+([A-Za-z0-9-~\/])+$/;  
         
         $("#add2").click(function() {
             //alert($("#bookInput").val().length+"!!!!!!!!!"+$("#typeInput").val().length+"***********"+$("#urlInput").val().length);
