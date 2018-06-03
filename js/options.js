@@ -123,6 +123,7 @@ function cbSearch(resp) {
             $("#typeInput").val("")
             $("#urlInput").val("")
             $("#contentInput").val("")
+            $("#avatarPreview").attr("src","111.jpg")
         })
 
         function cbPush(resp) {
