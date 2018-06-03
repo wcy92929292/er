@@ -109,8 +109,6 @@ function cbSearch(resp) {
             //alert($("#bookInput").val().length+"!!!!!!!!!"+$("#typeInput").val().length+"***********"+$("#urlInput").val().length);
             if($("#bookInput").val().length===0 || $("#typeInput").val().length===0 || $("#urlInput").val().length===0){
                 alert("请输入内容");
-            }else if(!reg.test($("#urlInput").val())){  
-                alert("这网址不是以http://https://开头，或者不是网址！");  
             }else{
                 var to = dappAddress;
                 var value = "0";
