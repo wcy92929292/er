@@ -4,6 +4,7 @@ $("#add").click(function(){
     $("#add1").show();
 	$("#shadows").hide();
 	$("#con").hide();
+	bindAvatar2();
 })
 bindAvatar2();
  function bindAvatar2() {
