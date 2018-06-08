@@ -50,6 +50,9 @@ $("#query24").click(function(){
 	$("#con").html("");
     q("getAllBook");
 })
+
+var serialNumber;
+var intervalQuery;
 function q(fun){
     
         var to = dappAddress;
@@ -120,11 +123,7 @@ function cbSearch(resp) {
                     listener: cbPush
                 });
             }
-            $("#bookInput").val("")
-            $("#typeInput").val("")
-            $("#urlInput").val("")
-            $("#contentInput").val("")
-            $("#avatarPreview").attr("src","111.jpg")
+            
         })
 
         function cbPush(resp) {
