@@ -129,7 +129,28 @@ function cbSearch(resp) {
 
         function cbPush(resp) {
             console.log("response of push: " + resp);
-            alert("感谢推荐！我们的进步来自您不懈的推荐,ps:大概15秒之后，即可看到自己推荐的好物");
+            //alert("感谢推荐！我们的进步来自您不懈的推荐,ps:大概15秒之后，即可看到自己推荐的好物");
             // q("getNewBook");
-            
+            if(typeof resp == 'string'){
+				console.log('reject');
+				alert("您取消了发布商品！");
+		   }else{
+				//alert("success");
+				intervalQuery = setInterval(function(){
+						funcIntervalQuery();
+				},15000); 
+		   }
         }
+        function funcIntervalQuery(){
+			  nebPay.queryPayInfo(serialNumber)
+				  .then(function(resp){
+					console.log("response:"+resp);
+					var respObject = JSON.parse(resp);
+					if(respObject.code ===1){
+					  alert("发布成功！即将刷新...");
+					  location.reload();
+					}
+				  }).catch(function(err){
+					console.log(err);
+				  });
+			}
